@@ -1,0 +1,41 @@
+CREATE TABLE films (
+    id INT PRIMARY KEY NOT NULL,
+    title TEXT,
+    release_year INT,
+    country TEXT,
+    duration INT,
+    language TEXT,
+    certification TEXT,
+    gross BIGINT,
+    budget BIGINT
+);
+
+
+
+CREATE TABLE people (
+    id INT PRIMARY KEY NOT NULL,
+    name TEXT,
+    birthdate DATE,
+    deathdate DATE
+);
+
+
+
+CREATE TABLE reviews (
+    id INT PRIMARY KEY NOT NULL,
+    film_id INT,
+    num_user INT,
+    num_critic INT,
+    imdb_score REAL,
+    num_votes INT,
+    facebook_likes INT
+);
+
+
+
+CREATE TABLE roles (
+    id INT PRIMARY KEY NOT NULL,
+    film_id INT,
+    person_id INT,
+    role TEXT
+);
